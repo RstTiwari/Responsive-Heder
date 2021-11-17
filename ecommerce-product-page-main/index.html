@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title> E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel='stylesheet' href="style.css">
+  
+</head>
+
+ 
+</head>
+<body>
+  <header>
+    <a>
+      <img class="logo" src='images/logo.svg'>
+    </a>
+    <div class='group'>
+      <ul class='navigation'>
+        <li><a href="#">collection</a></li>
+       <li><a href="#">Mens</a></li> 
+       <li><a href="#">Women</a></li>
+       <li><a href="#">about</a></li>
+       <li><a href="#">contact</a></li>
+            
+         
+         
+        
+       
+      
+       
+
+      </ul>
+      <ul class='action'>
+        <li><img src="images/icon-cart.svg"></a></li>
+        <li><a><img src="images/image-avatar.png" width="20%"></a></li>
+      </ul>
+      <div class="menuToggel">
+
+        
+        <img  class="ion-icon" src='images/icon-menu.svg'>
+        <img  class="ion-icon" src='images/icon-close.svg'> 
+
+
+      </div>
+       
+
+         
+      
+
+
+    </div>
+   
+  </header>
+  <div class='product'>
+    <div class="container">
+      <div class="mySlides">
+        
+        <img src="images/image-product-1.jpg" style="width:80%">
+      </div>
+    
+      <div class="mySlides">
+       
+        <img src="images/image-product-2.jpg" style="width:80%">
+      </div>
+    
+      <div class="mySlides">
+        
+        <img src="images/image-product-3.jpg" style="width:80%">
+      </div>
+        
+      <div class="mySlides">
+        
+        <img src="images/image-product-4.jpg" style="width:80%">
+      </div>
+    
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      <span></span>
+    
+     
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/image-product-1-thumbnail.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/image-product-2-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/image-product-3-thumbnail.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/image-product-4-thumbnail.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="product__info">
+      <p class="product__name"> sneakers company </p>
+      <h3>Fall Limited Edition<br>Sneakers</h3>
+      <p class="prodcut__description"> the low profile sneakers are your perfect casual wear companion featuring 
+        durable outer sole . ready to take on the masnsoon</p>
+        <div class="price">
+          <div class='product__price'>
+            <p style="font-weight:bolder; font-size: large;">$125</p> <button type='text'>50%</button>
+          </div>
+          
+          <p><del>$225</del></p>
+        </div>
+        <div>
+        <div class="product__qty">
+          <div class='product__qtybtn'>
+          <img class='product__qtybtn1' src='images/icon-minus.svg'></img>
+          <p class="product__qtyNo">0</p>
+          <img class='product__qtybtn2' src='images/icon-plus.svg'></img>
+
+          </div>
+          <button class="addcartbtn" type="button"><img  width="20%" src="images/icon-cart.svg">Add to Cart</button>
+      
+          
+          
+        </div>
+
+    </div>
+   
+  <script>{
+    let menuToggel =document.querySelector('.menuToggel')
+    let navigation__menu = document.querySelector('.navigation')
+    menuToggel.onclick = function(){
+      menuToggel.classList.toggle('active')
+      navigation__menu.classList.toggle('active')
+    }
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+ 
+}
+
+
+
+
+}
+  </script>
+</body>
+</html>
+
+  
+
